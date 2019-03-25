@@ -79,7 +79,9 @@ if ($ldapconn) {
 	
 	
 	if($r == true){
-		echo "Afegit!";
+        //echo "Afegit!";
+        $_SESSION["nouUser"] = $info["cn"];
+        header("Location: usuariCreat.php");
 	}
 	else{
 		header("Location: ErrorCreacio.php");

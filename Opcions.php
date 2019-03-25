@@ -26,6 +26,8 @@ else{
 ?>
 
 
+<!-- Formulari per introduir les dades per afegir-->
+
 <h2>Menú LDAP</h2>
 
 <form action="Opcions.php" method="POST">
@@ -40,8 +42,8 @@ else{
 </form>
 
 
-<form action="login.php">
-    <input type="submit" value="logout">
-</form>
+
+
+<a href="http://localhost/phpldap/login.php">Logout</a>
 
 

@@ -1,4 +1,6 @@
 <?php
+session_start();
+require_once("dbconfig.php");
 
 /**Delete */
 if( isset($_POST['delete']))
@@ -15,7 +17,24 @@ if ($ldapconn) {
 // Autenticant-se en el servidor openLDAP
 $ldapbind = ldap_bind($ldapconn, $ldapadmin, $ldappass);
 
+$res = ldap_delete($ldapconn, "cn=".$_POST["delete"].",ou=usuaris, dc=fjeclot, dc=net");
+
+if($res){
+    $_SESSION["usuariEsborrat"] = $_POST["delete"];
+    header('Location: usuariEsborrat.php'); 
 }
+
+else{
+    
+    $_SESSION["usuariEsborrar"] = $_POST["delete"];
+    header('Location: ErrorEsborrant.php'); 
+}
+
+
+ldap_close($ldapconn);
+}
+
+
 
 }
 
