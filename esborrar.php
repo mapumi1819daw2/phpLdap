@@ -14,12 +14,16 @@ ldap_set_option($ldapconn, LDAP_OPT_PROTOCOL_VERSION, 3);
 /**Si hem aconseguit un identificador */
 if ($ldapconn) {
 
+    
+
 // Autenticant-se en el servidor openLDAP
-$ldapbind = ldap_bind($ldapconn, $ldapadmin, $ldappass);
+$ldapadmin= "cn=admin,dc=fjeclot,dc=net";
+$ldapbind = ldap_bind($ldapconn, $ldapadmin, "fjeclot");
+
 
 $res = ldap_delete($ldapconn, "cn=".$_POST["delete"].",ou=usuaris, dc=fjeclot, dc=net");
 
-if($res){
+if($res == true){
     $_SESSION["usuariEsborrat"] = $_POST["delete"];
     header('Location: usuariEsborrat.php'); 
 }
