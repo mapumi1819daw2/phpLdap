@@ -13,9 +13,6 @@ ldap_set_option($ldapconn, LDAP_OPT_PROTOCOL_VERSION, 3);
 
 /**Si hem aconseguit un identificador */
 if ($ldapconn) {
-
-    
-
 // Autenticant-se en el servidor openLDAP
 $ldapadmin= "cn=admin,dc=fjeclot,dc=net";
 $ldapbind = ldap_bind($ldapconn, $ldapadmin, "fjeclot");
