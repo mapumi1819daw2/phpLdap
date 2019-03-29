@@ -101,36 +101,52 @@ else{
 
 ?>
 
+
+<html>
+<head>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
 <h2>Afegir un nou usuari</h2>
 <!--- Afegir -->
 <form action=afegir.php method=post>
 		<table>
         <tr>
-			  <td>Uid: </td>
-			  <td><input type=text name=uidadd size=16 maxlength=15></td>
+			  <td><span class="input-group-text">Uid: </span></td>
+			  <td><input class="form-control" type=text name=uidadd size=16 maxlength=15></td>
            </tr>
            
            <tr>
-			  <td>Cn[Apodo]: </td>
-			  <td><input type=text name=cnadd size=16 maxlength=15></td>
+			  <td><span class="input-group-text">Cn[Apodo]: </span></td>
+			  <td><input class="form-control" type=text name=cnadd size=16 maxlength=15></td>
            </tr>
            
            <tr>
-			  <td>Sn[Surname]: </td>
-			  <td><input type=text name=snadd size=16 maxlength=15></td>
+			  <td><span class="input-group-text">Cn[Apodo]: Sn[Surname]: </span></td>
+			  <td><input class="form-control" type=text name=snadd size=16 maxlength=15></td>
            </tr>
 		<tr>
-			  <td>Nom d'usuari: </td>
-			  <td><input type=text name=add size=16 maxlength=15></td>
+			  <td><span class="input-group-text">Cn[Apodo]: Nom d'usuari: </span></td>
+			  <td><input class="form-control" type=text name=add size=16 maxlength=15></td>
 		   </tr>
 		   <tr>
-			  <td>Contrasenya: </td>
-			  <td><input type=password name=padd size=16 maxlength=15></td>
+			  <td><span class="input-group-text">Cn[Apodo]: Contrasenya: </span></td>
+			  <td><input class="form-control" type=password name=padd size=16 maxlength=15></td>
 		   </tr>
 		
 		   <tr>
-			  <td colspan=2><input type=submit value="Afegir"></td>
+			  <td colspan=2><input class="btn btn-primary" type=submit value="Afegir"></td>
 		   </tr>
 	</table>
 	</form>
 
+<br>
+
+<a href='http://localhost/phpldap/Opcions.php'> Tornar al menú</a>
+
+</body>
+
+</html>
