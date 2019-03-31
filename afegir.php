@@ -71,12 +71,9 @@ if ($ldapconn) {
 
 	if ($ldapbind) {
 
-     
-
 	// add data to directory
 	$r = ldap_add($ldapconn, "cn=".$info["cn"].",ou=usuaris, dc=fjeclot, dc=net", $info);
 
-	
 	
 	if($r == true){
         //echo "Afegit!";

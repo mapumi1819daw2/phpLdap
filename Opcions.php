@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-
+/* En funció del botó escollit al formulari anirà a una pàgina o altra */
 if(isset($_POST["afegir"])){
     header('Location: afegir.php'); 
 }

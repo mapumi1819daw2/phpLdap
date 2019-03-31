@@ -1,13 +1,15 @@
 <?php
 session_destroy();
+/* funció per poder treballar amb sessions. Ha d'estar present en tots els arxius php */
 session_start(); 
 
+/* Importem l'arxiu amb les variables de configuració */
 require_once("dbconfig.php");
 
 /**Login */
 if( isset($_POST['login']) && isset($_POST['password']))
 {
-
+	/* En cas que no sigui usuari admin, mostrem pàgina d'error */
 	if(strcmp($_POST['login'], "admin")){
 		header('Location: Error.php');
 	}
